@@ -334,10 +334,10 @@ REGISTRATION_TEMPLATE = """
         }
 
         .game-title {
-            font-size: 28px;
+            font-size: 30px;
             color: var(--title-color);
             margin-bottom: 10px;
-            font-weight: 700;
+            font-weight: 900;
         }
 
         .game-subtitle {
@@ -408,8 +408,10 @@ REGISTRATION_TEMPLATE = """
             top: 20px;
             right: 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
+            z-index: 10;
         }
 
         .theme-toggle {
@@ -428,10 +430,11 @@ REGISTRATION_TEMPLATE = """
         }
 
         .theme-label {
-            font-size: 14px;
+            font-size: 11px;
             font-weight: normal;
             color: var(--text-color);
             user-select: none;
+            text-align: center;
         }
     </style>
 </head>
@@ -441,8 +444,8 @@ REGISTRATION_TEMPLATE = """
 
 <div class="registration-container">
     <div class="theme-toggle-container">
-        <span class="theme-label">теми День/ніч</span>
         <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <span class="theme-label">теми День/ніч</span>
     </div>
     <div class="game-title">🇺🇦 Мовне відкриття 🇺🇦</div>
     <div class="game-subtitle">Західна Ґвара - Велика вікторина</div>
@@ -615,10 +618,10 @@ HTML_TEMPLATE = """
         .users-counter {
             background: #FFD700;
             color: #0057B7;
-            padding: 10px 20px;
-            border-radius: 25px;
+            padding: 4px 12px;
+            border-radius: 15px;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 10px;
             cursor: pointer;
             box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
             transition: all 0.3s;
@@ -639,8 +642,9 @@ HTML_TEMPLATE = """
             top: 15px;
             right: 15px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
             z-index: 10;
         }
 
@@ -660,17 +664,19 @@ HTML_TEMPLATE = """
         }
 
         .theme-label {
-            font-size: 14px;
+            font-size: 11px;
             font-weight: normal;
             color: var(--text-color);
             user-select: none;
+            text-align: center;
+        }
         }
 
         .game-header {
-            font-size: 24px;
+            font-size: 38px;
             color: var(--header-color);
             margin-bottom: 15px;
-            font-weight: 700;
+            font-weight: 900;
             line-height: 1.2;
         }
 
@@ -910,8 +916,8 @@ HTML_TEMPLATE = """
 
 <div class="game-container">
     <div class="theme-toggle-container">
-        <span class="theme-label">теми День/ніч</span>
         <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        <span class="theme-label">теми День/ніч</span>
     </div>
 
     <div class="users-counter" onclick="adminLogin()">
