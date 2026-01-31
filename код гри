@@ -539,7 +539,6 @@ HTML_TEMPLATE = """
             --option-bg: #f8f9fa;
             --option-border: #e9ecef;
             --option-hover: #e3f2fd;
-            /* --option-hover-border: #2196f3;  <-- ВИДАЛИЛИ СИНЮ ОБВОДКУ */
             --modal-bg: white;
             --modal-text: #333;
             --input-bg: white;
@@ -559,7 +558,6 @@ HTML_TEMPLATE = """
             --option-bg: #636e72;
             --option-border: #555;
             --option-hover: #0984e3;
-            /* --option-hover-border: #74b9ff; <-- ВИДАЛИЛИ СИНЮ ОБВОДКУ */
             --modal-bg: #2d3436;
             --modal-text: #ecf0f1;
             --input-bg: #636e72;
@@ -614,20 +612,22 @@ HTML_TEMPLATE = """
             transition: background 0.3s ease;
         }
 
+        /* ЗМІНА: Кнопка гравців зліва */
         .users-counter {
+            position: absolute;
+            top: 15px;
+            left: 15px;
             background: #FFD700;
             color: #0057B7;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 25px;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 13px;
             cursor: pointer;
             box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
             transition: all 0.3s;
-            align-self: center;
-            margin-bottom: 8px;
-            display: inline-block;
             border: 2px solid #0057B7;
+            z-index: 10;
         }
 
         .users-counter:hover {
@@ -762,7 +762,6 @@ HTML_TEMPLATE = """
         @media (hover: hover) {
             .option-btn:hover {
                 background: var(--option-hover);
-                /* border-color: transparent; */ /* Прибрали зміну кольору бордера */
                 color: var(--text-color);
             }
         }
@@ -912,13 +911,14 @@ HTML_TEMPLATE = """
 <div class="beta-badge">БЕТА ТЕСТУВАННЯ</div>
 
 <div class="game-container">
+    <!-- ЗМІНА: Кнопка гравців тепер зліва -->
+    <div class="users-counter" onclick="adminLogin()">
+        👥 Гравці
+    </div>
+
     <div class="theme-toggle-container">
         <span class="theme-label">теми День/ніч</span>
         <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-    </div>
-
-    <div class="users-counter" onclick="adminLogin()">
-        👥 Гравці
     </div>
 
     <div class="game-header">🇺🇦 Мовне відкриття 🇺🇦</div>
